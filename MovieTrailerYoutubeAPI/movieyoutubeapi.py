@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 import csv
 
 # set constants
-DEVELOPER_KEY = "AIzaSyBfc2OUF7sYUpV_o6xxRHyTmbeguj3qbns"
+DEVELOPER_KEY = "developer key"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 MOVIE_LIST_FILENAME = "MovieList.csv"
