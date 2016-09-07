@@ -2,9 +2,12 @@ from modules import process_data
 from modules import process_wiki
 from modules import create_html
 from objects import media
-import webbrowser
+import sys
 
 # read data file and get list of movies
+print()
+print ('Opening movie data file and processing data...')
+print()
 list_of_movies = process_data.get_list_of_movies()
 if len(list_of_movies) <= 0:
     print("No movies found in file")
@@ -17,6 +20,7 @@ if len(list_of_trailers) <= 0:
     quit()
 
 # for each movie, get summary, box art url and youtube trailer id
+print ('Making API call to get all movies storyline and box art url...')
 movie_obj_list = []
 for index, movie_name in enumerate(list_of_movies):
     if movie_name == "Storks":
@@ -35,5 +39,3 @@ for index, movie_name in enumerate(list_of_movies):
     movie_obj_list.append(movie_obj)
 
 create_html.open_movies_page(movie_obj_list)
-
-#webbrowser.open('animation_movies_2016.html', new=2)
